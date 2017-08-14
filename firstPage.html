@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .unselectable {
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+</style>
+<style>
+.default{ cursor: default;}
+</style>
+    <style>
+        .outer{
+                text-align: center;
+               border: 1px solid black;
+                font-weight: 900;
+                font-size: 40pt;
+        }
+</style>  
+    <style>
+        table {
+        width: 100%; 
+        background: #008080; 
+        color: whitesmoke; 
+        border-spacing: 1px; 
+        }
+        td, th {
+    
+        padding: 5px; /* Поля вокруг текста */
+        }
+        th {
+    background: #8A2BE2; /* Цвет фона строки заголовка */
+    color: #ffe;   
+    font-family: Arial, Helvetica, sans-serif; /* Выбор гарнитуры */
+    font-size: 30 pt; /* Размер текста */
+   }
+   tr:hover td {background: #20B2AA;}
+    
+    </style>  
+<body bgcolor="#c0c0c0">
+
+    
+
+<div class = "outer unselectable default" id="header">
+    <span id="btnPrevDay">&lt;</span>
+    <span id="date"></span>
+    <span id="btnNextDay">&gt;</span>
+    
+</div>
+
+<script>
+    var x = new Date();
+        
+        
+        function nextDay(){ 
+             x.setDate(x.getDate() + 1 ); 
+            document.getElementById("date").innerHTML=x.toDateString() ;
+        }
+        function backDay(){
+            x.setDate(x.getDate() - 1) ;
+            document.getElementById("date").innerHTML= x.toDateString() ;
+        }
+    
+    
+    document.getElementById( "date" ).innerHTML = x.toDateString();
+    document.getElementById( "btnPrevDay" ).onclick = backDay;
+    document.getElementById( "btnNextDay").onclick  = nextDay;
+</script>
+
+<table>
+    <tr><th class = "default">FrontEnd Errors</th>
+        <th class = "default">№</th>
+        <th class = "default">BackEnd Errors</th>
+        <th class = "default">№</th>
+    </tr>
+    <tr><td>Some Information 1</td>
+        <td>№</td>
+        <td>Some Information 2</td>
+        <td>№</td>
+    </tr>
+        <tr>
+        <td>Some Information 3</td>
+        <td>№</td>
+        <td>Some Information 4</td>
+        <td>№</td>
+    </tr>
+        <tr>
+        <td>Some Information 5</td>
+        <td>№</td>
+        <td>Some Information 6</td>
+        <td>№</td>
+    </tr>
+        <tr>
+        <td>Some Information 7</td>
+        <td>№</td>
+        <td>Some Information  8</td>
+        <td>№</td>
+    </tr>
+        
+    
+</table>
+
+
+
+
+</body>
+</html>
