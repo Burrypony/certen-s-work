@@ -1,109 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        .unselectable {
-    -moz-user-select: -moz-none;
-    -o-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    }
-</style>
-<style>
-.default{ cursor: default;}
-</style>
-    <style>
-        .outer{
-                text-align: center;
-               border: 1px solid black;
-                font-weight: 900;
-                font-size: 40pt;
-        }
-</style>  
-    <style>
-        table {
-        width: 100%; 
-        background: #008080; 
-        color: whitesmoke; 
-        border-spacing: 1px; 
-        }
-        td, th {
-    
-        padding: 5px; /* Поля вокруг текста */
-        }
-        th {
-    background: #8A2BE2; /* Цвет фона строки заголовка */
-    color: #ffe;   
-    font-family: Arial, Helvetica, sans-serif; /* Выбор гарнитуры */
-    font-size: 30 pt; /* Размер текста */
-   }
-   tr:hover td {background: #20B2AA;}
-    
-    </style>  
-<body bgcolor="#c0c0c0">
-
-    
-
+     <head>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link href="firstpages.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+     </head>    
+<body >
+<div id="theMainestPage" >
 <div class = "outer unselectable default" id="header">
     <span id="btnPrevDay">&lt;</span>
     <span id="date"></span>
     <span id="btnNextDay">&gt;</span>
-    
 </div>
 
-<script>
-    var x = new Date();
-        
-        
-        function nextDay(){ 
-             x.setDate(x.getDate() + 1 ); 
-            document.getElementById("date").innerHTML=x.toDateString() ;
-        }
-        function backDay(){
-            x.setDate(x.getDate() - 1) ;
-            document.getElementById("date").innerHTML= x.toDateString() ;
-        }
-    
-    
-    document.getElementById( "date" ).innerHTML = x.toDateString();
-    document.getElementById( "btnPrevDay" ).onclick = backDay;
-    document.getElementById( "btnNextDay").onclick  = nextDay;
+<div id="tableWrapper"></div>
+</div>
+<div class ="ERRORpage hidden" id="ErrorDetails" >
+<button class ="backk" onclick= "back3()">Back</button>
+<h1 class ="errorTitle2" id= "er4or"></h1>
+<div id="ErrorPageWithDetails">
+    <div id="error-btn">
+        <div class="dropdown-menu"> <a class="dropdown-item" href="#">1</a><a class="dropdown-item" href="#">2</a><a class="dropdown-item" href="#">3</a></div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div id="error-btn" class="btn-group">
+<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">" 
+    errorDetail.data[].users[0]"</button>
+<div class="dropdown-menu"> <a class="dropdown-item" href="#">1</a><a class="dropdown-item" href="#">2</a><a class="dropdown-item" href="#">3</a></div>
+</div>
+
+
+<script src="main.js">
 </script>
-
-<table>
-    <tr><th class = "default">FrontEnd Errors</th>
-        <th class = "default">№</th>
-        <th class = "default">BackEnd Errors</th>
-        <th class = "default">№</th>
-    </tr>
-    <tr><td>Some Information 1</td>
-        <td>№</td>
-        <td>Some Information 2</td>
-        <td>№</td>
-    </tr>
-        <tr>
-        <td>Some Information 3</td>
-        <td>№</td>
-        <td>Some Information 4</td>
-        <td>№</td>
-    </tr>
-        <tr>
-        <td>Some Information 5</td>
-        <td>№</td>
-        <td>Some Information 6</td>
-        <td>№</td>
-    </tr>
-        <tr>
-        <td>Some Information 7</td>
-        <td>№</td>
-        <td>Some Information  8</td>
-        <td>№</td>
-    </tr>
-        
-    
-</table>
-
-
 
 
 </body>

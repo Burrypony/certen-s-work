@@ -1,0 +1,73 @@
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+.default{ cursor: default;}
+        .outer{
+                text-align: center;
+                border: 1px solid #455A64;
+                font-weight: 900;
+                font-size: 40pt;
+                color: #FFBF62;
+        }
+.ErrorsNumber{text-align: center;
+              width: 110px;
+              border-left: 2px dashed black;
+              border-right: 2px dashed black;
+             }
+
+        table {
+        width: 100%; 
+        background: #5D7785; 
+        
+        border-spacing: 1px; 
+        
+        }
+        td, th {
+        vertical-align: text-top;
+         
+        }
+        th {
+    background: #FF7934; /* Цвет фона строки заголовка */
+    color: #37474F;   
+    font-weight: Regular; /* Выбор гарнитуры */
+    font-size: 18 px; /* Размер текста */
+   }
+    
+   
+   td:hover  {background: #81B2CA;}
+    .pupipu {background-color:#F5F5F5;}
+    td  {
+        font-size: 14px;
+        font-weight: Regular;
+    }
+    
+
+    .hidden
+    {
+        display: none;
+    }
+    .visible
+    {
+        display: block;
+    }
+    .backk{
+        background-color: #FF7934;
+        width: 100px;
+        height: 40px;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold; 
+    }
+    .errorTitle2{
+        text-align: center;
+        border: 1px solid #F5F5F5;
+        color: #37474F;
+        font-size: 24px;
+        font-weight: lighter;
+    }
+    body {background-color: #455A64;}
