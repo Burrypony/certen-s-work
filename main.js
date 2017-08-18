@@ -100,10 +100,11 @@
                     }
                     
                 }
-
-                errorsTable = "<table><tr><th>Date</th><th>Number</th><th>UserId</th><th>Browser</th></tr><tr><td>" + errorDetail.data.date + "</td><td>" + errorDetail.data.number 
-                +"</td><td>" + errorDetail.data.user + "</td><td>" + errorDetail.data.browser + " </td></tr></table>";
-                errorsTable += "/<table>" ;
+                Dropdowns ="<div id=\"dropdownMenuButton\" class=\"btn-group\"><button type=\"button\" class=\"btn btn-danger dropdown-toggle\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">puppppp</button><div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\"> <a class=\"dropdown-item\" href=\"#\">"+errorDetail.data[0].users[0]+"</a><a class=\"dropdown-item\" href=\"#\">"+errorDetail.data[0].users[1]+"</a><a class=\"dropdown-item\" href=\"#\">"+errorDetail.data[0].users[2]+"</a></div></div>";
+                
+                errorsTable = "<table><tr><th>Date</th><th>Number</th><th>UserId</th><th>Browser</th></tr><tr><td>" + errorDetail.data[0].date + "</td><td>" + errorDetail.data[0].number 
+                +"</td><td>" + Dropdowns  + "</td><td>" + errorDetail.data[0].browser[2] + " </td></tr></table>";
+                errorsTable += "<table>" ;
                 document.getElementById("ErrorPageWithDetails").innerHTML= errorsTable;
 
         }
